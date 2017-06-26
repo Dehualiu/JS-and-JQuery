@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function mOver(){
+        document.getElementById('p1').style.background="#ffffff";
+    }
+    function mOut(){
+        document.getElementById('p1').style.background="#000000";
+    }
+    function mDown(){
+        document.getElementById('p1').style.background="#fff000";
+        document.getElementById("p1").innerHTML="你此时按下了鼠标";
+    }
+    function mUp(){
+        document.getElementById('p1').style.background="#ffffff";
+        document.getElementById("p1").innerHTML="你此时抬起了鼠标";
+    }
+    function mMove(){
+        document.getElementById('p1').style.background="#325451";
+    }
+</script>
+
+<div id="p1" onmousemove="mMove()"
+     onmouseover="mOver()" onmouseout="mOut()" onmousedown="mDown()" onmouseup="mUp()"
+     style="width: 300px;height:300px;border:2px solid #ff0000;">
+
+</div>
+
+
+</body>
+</html>

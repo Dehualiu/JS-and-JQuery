@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("demo").value;
+            if(x==""||isNaN(x)){
+                alert("输入的格式不正确");
+            }
+            else{
+                alert("输入正确！");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p>如果输入的不是数字，则提示输入格式不对</p>
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">提交</button>
+</body>
+</html>

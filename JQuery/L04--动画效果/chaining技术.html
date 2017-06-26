@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chaining技术</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                //$("#p1").css("background","red").slideUp(1000).slideDown(1000)
+                $("#p1").css("color","red").animate({height:'300px'},500)
+                $("#p1").css("background","yellow").animate({width:'300px'},600)
+                $("#p1").css("fontSize","24px").animate({height:'150px'},700)
+                $("#p1").animate({width:'150px'},500)
+            })
+
+            $("#button1").click(function(){
+                $("#p2").css("color","red").slideUp(1000).slideDown(1000)
+            })
+        })
+    </script>
+</head>
+<body>
+<button type="button" id="button">点击</button><br/><br/>
+<button type="button" id="button1">再次点击</button>
+<p id="p2">JQuery is very fun ！</p>
+<div id="p1" style="width:150px;height:150px;background:green;position:absolute">This is a paragraph</div>
+</body>
+</html>

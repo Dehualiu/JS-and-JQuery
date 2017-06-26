@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>parent遍历</title>
+<style>
+    .ancestors *
+    {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<script src="../jquery-3.2.1.min.js">
+</script>
+<script>
+    //只会向上一级对 DOM 树进行遍历。
+    $(document).ready(function(){
+        $("span").parent().css({"color":"red","border":"2px solid red"});
+    });
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+    <div style="width:500px;">div (曾祖父)
+        <ul>ul (祖父)
+            <li>li (直接父)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+    <div style="width:500px;">div (祖父)
+        <p>p (直接父)
+            <span>span</span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

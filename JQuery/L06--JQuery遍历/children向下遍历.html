@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>children向下遍历</title>
+    <style>
+        .descendants *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("div").children(".one").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (当前元素)
+    <p class="one">p (子)
+        <span>span (孙)</span>
+    </p>
+    <p class="two">p (子)
+        <span>span (孙)</span>
+    </p>
+</div>
+
+</body>
+</html>

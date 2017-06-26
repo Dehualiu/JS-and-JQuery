@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除元素</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        //remove删除被选元素及其子元素，可以对被选元素进行筛选
+        //empty删除被选元素中的子元素
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").remove(".p1")
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="div1" style="width:300px;height:140px;background:lightblue;">
+    <p>端午节快乐！</p>
+    <p class="p1">大家吃了粽子吗</p>
+    <p class="p2">大家去看了赛龙舟吗？</p>
+</div><br/><br/>
+<button type="button">点击</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击添加节点元素</title>
+</head>
+<body>
+<ul id="mylist">
+    <li>Coffee</li>
+    <li>Tea</li>
+</ul>
+<button type="button" onclick="myFunction()">点击添加</button>
+<script>
+    function myFunction(){
+        var para = document.createElement("li");
+        var node = document.createTextNode("Water");
+        para.appendChild(node);
+        document.getElementById("mylist").appendChild(para);
+    }
+</script>
+
+</body>
+</html>

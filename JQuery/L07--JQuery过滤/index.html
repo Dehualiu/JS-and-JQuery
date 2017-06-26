@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("div p").first().css({background:'yellow'})
+            })
+
+            $("#button2").click(function(){
+                $("div p").last().css({background:'lightblue'})
+            })
+
+            $("#button3").click(function(){
+                $("p").eq(5).css({background:'pink'})
+            })
+
+            $("#button4").click(function(){
+                $("p").filter(".head").css({color:'red'})
+            })
+
+            $("#button5").click(function(){
+                $("p").not(".head").css({color:'blue'})
+            })
+        })
+    </script>
+</head>
+<body>
+<!--first() 方法返回被选元素的首个元素。-->
+<button type="button" id="button1">first()方法</button>
+<!--last() 方法返回被选元素的最后一个元素。-->
+<button type="button" id="button2">last()方法</button>
+<!--eq() 方法返回被选元素中带有指定索引号的元素。-->
+<button type="button" id="button3">eq()方法</button>
+<!--不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回-->
+<button type="button" id="button4">filter()方法</button>
+<!--返回不匹配标准的所有元素-->
+<button type="button" id="button5">not()方法</button>
+<div>
+    <p>This is first paragraph!</p>
+    <p>This is second paragraph!</p>
+    <p class="head">This is three paragraph!</p>
+    <p>This is four paragraph!</p>
+    <p class="head">This is five paragraph!</p>
+</div>
+<br/><br/>
+<p>This is six paragraph</p>
+<p class="head">This is seven paragraph</p>
+<br/><br/>
+<div>
+    <p>This is nine paragraph</p>
+    <p class="head">This is ten paragraph</p>
+</div>
+
+</body>
+</html>

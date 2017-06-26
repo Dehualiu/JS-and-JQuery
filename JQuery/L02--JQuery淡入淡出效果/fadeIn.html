@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fadeIn</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeIn()
+                $("#div2").fadeIn(2000)
+                $("#div3").fadeIn(4000)
+            })
+        })
+    </script>
+</head>
+<body>
+<p>即将显现不同的渐变</p>
+<button type="button">显示</button>
+<div id="div1" style="width: 80px;height: 80px;background:red;display:none;"></div>
+<div id="div2" style="width: 80px;height: 80px;background:#fff000;display:none;"></div>
+<div id="div3" style="width: 80px;height: 80px;background:#000000;display:none;"></div>
+</body>
+</html>

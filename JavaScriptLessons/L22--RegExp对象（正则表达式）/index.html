@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write("test() 方法检索字符串中的指定值。返回值是 true 或 false。"+"<br/>")
+    var senten = new RegExp("e")
+    document.write(senten.test("Hello,World,I come here!")+"<br/>")
+    document.write(senten.test("this is my most book!")+"<br/>")
+
+    document.write("exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null"+"<br/>")
+    document.write(senten.exec("Hello,World,I come here!")+"<br/>")
+
+    //new RegExp(pattern, attributes)格式，参数 attributes 是一个可选的字符串，
+    // 包含属性 "g"、"i" 和 "m"，分别用于指定全局匹配、区分大小写的匹配和多行匹配。
+    //找到第一个 "e"，并存储其位置
+    //如果再次运行 exec()，则从存储的位置开始检索，并找到下一个 "e"，并存储其位置
+    var second = new RegExp("e","g")
+    do{
+        var result = second.exec("Hello,i am very like this fruit!")
+        document.write(result)
+    }
+    while(result!=null)
+
+    document.write("<br/>")
+
+    //compile() 既可以改变检索模式，也可以添加或删除第二个参数。
+    var patt1=new RegExp("e");
+    document.write(patt1.test("The best things in life are free")+"<br/>")
+    patt1.compile("d");
+    document.write(patt1.test("The best things in life are free"))
+
+
+
+</script>
+</body>
+</html>

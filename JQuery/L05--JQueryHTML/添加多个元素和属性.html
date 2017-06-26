@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加多个元素和属性</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var txt1="<p>Text1</p>";              // 以 HTML 创建新元素
+                var txt2=$("<p></p>").text("Text2");  // 以 jQuery 创建新元素
+                var txt3=document.createElement("p");
+                txt3.innerHTML="Text3";               // 通过 DOM 来创建文本
+
+                $("body").append(txt1,txt2,txt3);
+            })
+        })
+    </script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button>追加文本</button>
+
+</body>
+</html>

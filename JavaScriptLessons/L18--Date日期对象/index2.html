@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="myFunction()">
+<script>
+    function myFunction(){
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        setTimeout('myFunction()',500);
+        m = checktime(m);
+        s = checktime(s);
+        document.getElementById("p1").innerHTML=h+":"+m+":"+s;
+    }
+    function checktime(i){
+        if(i<10)
+        {i="0"+i}
+        return i
+    }
+</script>
+<p id="p1"></p>
+</body>
+</html>

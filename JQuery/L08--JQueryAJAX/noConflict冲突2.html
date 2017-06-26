@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>noConflict冲突2</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $.noConflict();
+        jQuery(document).ready(function($){
+            $("button").click(function(){
+                $("div").text("还是原来的味道")
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    还是原来的配方
+</div>
+<button type="button">Click On</button>
+</body>
+</html>

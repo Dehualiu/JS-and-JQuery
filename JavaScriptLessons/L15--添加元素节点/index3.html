@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    <p id="p1">这是第一段</p>
+    <p id="p2">这是第二段</p>
+    <p id="p3">这是第三段</p>
+</div>
+<button type="button" onclick="myFunction()">删减段落</button>
+<script>
+    function myFunction(){
+        /*
+        var parent = document.getElementById("div1");
+         var child = document.getElementById("p1");
+        parent.removeChild(child);
+        */
+        var child = document.getElementById("p1");
+        //通过子元素找到父元素进行移除，DOM 需要清楚您需要删除的元素，以及它的父元素
+        child.parentNode.removeChild(child);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stop动画</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".file").click(function(){
+                $(".content").slideToggle(2000)
+            })
+
+            $("button").click(function(){
+                $(".content").stop(true)
+            })
+        })
+    </script>
+    <style type="text/css">
+        .file,.content{
+            width:300px;
+            text-aligh:center;
+            background:lightseagreen;
+            border:1px solid black;
+        }
+        .content{
+            height:400px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<button type="button">停止</button><br/><br/>
+<div class="file">点击这里，向下滑动面板</div>
+<div class="content">Hello,World!</div>
+</body>
+</html>

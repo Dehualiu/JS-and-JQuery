@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#head").click(function(){
+                $("#content").fadeToggle(1000)
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="head" style="width:410px;height:40px;background-color:green;text-align:center;line-height:40px;border:1px solid #000000">点击淡出/淡入文本框</div>
+<div id="content" style="display:none;width:400px;height:100px;background-color:green;text-align:center;padding:5px;border:1px solid #000000">一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。
+    在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识</div>
+</body>
+</html>

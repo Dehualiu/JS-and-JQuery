@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变 HTML 图像</title>
+    <script>
+        function changeimage(){
+            bulb = document.getElementById("myimage");
+            /*检测路径中是否存在an.gif*/
+            if(bulb.src.match("an.gif"))
+            {
+                bulb.src="liang.gif";
+            }
+            else
+            {
+                bulb.src="an.gif";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <p>改变HTNL图像</p>
+    <img id="myimage" src="an.gif"></br>
+    <button onclick="changeimage()">这是开关</button>
+</body>
+</html>

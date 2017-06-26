@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获得内容和属性</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                alert("显示文本text："+$("#text").text());
+            })
+
+            $("#button2").click(function(){
+                alert("显示HTML(包括 HTML 标记)："+$("#text").html());
+            })
+
+            $("#button3").click(function(){
+                alert("获取输入Value："+$("#text1").val());
+            })
+            //获取属性
+            $("#button4").click(function(){
+                alert("输出href的值："+$("#www").attr("href"));
+            })
+        })
+    </script>
+</head>
+<body>
+<button type="button" id="button1">点击文本</button>
+<button type="button" id="button2">点击HTML</button>
+<button type="button" id="button3">点击val</button>
+<button type="button" id="button4">点击href</button>
+<p id="text">这里的<b>刘德华</b>字体非常漂亮</p>
+<p>姓名：<input type="text" id="text1" value="liudehua"></p>
+<p><a href="http://www.baidu.com" id="www">百度</a></p>
+</body>
+</html>

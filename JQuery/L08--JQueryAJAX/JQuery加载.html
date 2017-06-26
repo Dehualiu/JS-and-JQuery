@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JqueryAJAX加载</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        //在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示。
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#text").load("01.txt")
+            })
+        //将文件中 id="p1" 的元素的内容，加载到指定的 <div> 元素中
+            $("#button2").click(function(){
+                $("#text").load("01.txt .p1")
+            })
+        })
+    </script>
+</head>
+<body>
+<button type="button" id="button1">Press on</button>
+<button type="button" id="button2">加载指定的AJAX</button>
+<div id="text">
+    <p>今天是5月31号！</p>
+</div>
+</body>
+</html>

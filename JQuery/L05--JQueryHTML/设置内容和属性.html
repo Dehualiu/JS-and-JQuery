@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置内容和属性</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#text1").text("改变text成功！");
+            })
+
+            $("#button2").click(function(){
+                $("#text2").html("<b>改变HTML样式成功</b>"+"<br/>"+"<p style='color:red'>再加一次改变css</p>");
+            })
+
+            $("#button3").click(function(){
+                $("#text3").val("Robot");
+            })
+
+            $("#button4").click(function(){
+                $("#text4").attr({
+                    "href":"http://image.baidu.com",
+                    "title":"百度图片"
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+<button type="button" id="button1">改变文本</button>
+<button type="button" id="button2">改变样式</button>
+<button type="button" id="button3">改变输入</button>
+<button type="button" id="button4">改变attr</button>
+<p id="text1">今天是端午节！</p>
+<p id="text2">今天是端午节，要吃粽子</p>
+<p>请输入：<input type="text" id="text3" value="粽子"></p>
+<p><a href="http://www.baidu.com" id="text4" title="百度
+">百度</a></p>
+</body>
+</html>

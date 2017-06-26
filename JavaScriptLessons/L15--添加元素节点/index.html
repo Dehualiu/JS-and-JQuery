@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建添加节点</title>
+</head>
+<body>
+<div id="div1">
+    <p>这是第一段落</p>
+    <p>这是第二段落</p>
+</div>
+<button type="button" onclick="myFunction()">点击创建</button>
+<script>
+    function myFunction(){
+    //创建元素节点，具有指定的标签名，例如：p标签和b标签
+    var para = document.createElement("p");
+    //创建文本节点，可规定此节点的文本
+    var node = document.createTextNode("这是新添加的节点元素");
+    //向节点添加最后一个子节点，把这个文本节点追加到p节点
+    para.appendChild(node);
+    //最后把P节点添加到div中,您必须向一个已有的元素追加这个新元素。
+    var demo = document.getElementById("div1");
+    demo.appendChild(para);
+    }
+</script>
+</body>
+</html>

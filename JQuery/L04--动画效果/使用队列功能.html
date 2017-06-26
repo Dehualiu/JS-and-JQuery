@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用队列功能</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").animate({height:'150px'},500)
+                $("div").animate({width:'150px'},600)
+                $("div").animate({height:'50px'},300)
+                $("div").animate({width:'50px'},400)
+            })
+        })
+    </script>
+</head>
+<body>
+<button type="button">点我</button><br/><br/>
+<div style="width:50px;height:50px;background:green;"></div>
+</body>
+</html>

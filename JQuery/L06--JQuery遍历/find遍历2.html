@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find遍历2</title>
+    <style>
+        .descendants *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js">
+    </script>
+    <script>
+        //回被选元素的后代元素，一路向下直到最后一个后代
+        $(document).ready(function(){
+            $("ul").find("*").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element)
+    <ul>ul
+        <li>li
+            <p>p (子)
+                <span>span (孙)</span>
+            </p>
+        </li>
+    </ul>
+    <p>p (child)
+        <span>span (孙)</span>
+    </p>
+</div>
+
+</body>
+</html>

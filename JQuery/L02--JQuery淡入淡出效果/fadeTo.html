@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).click(function(){
+                $("#div1").fadeTo(1000,0.5)
+                $("#div2").fadeTo(3000,0.2)
+                $("#div3").fadeTo(5000,0.8)
+            })
+        })
+    </script>
+</head>
+<body>
+<p>fadeTo表示淡出的程度</p>
+<button type="button">点击实验</button><br/><br/>
+<div id="div1" style="width:80px;height:80px;background-color:#fff000"></div>
+<div id="div2" style="width:80px;height:80px;background-color:#f00000"></div>
+<div id="div3" style="width:80px;height:80px;background-color:#000000"></div>
+</body>
+</html>

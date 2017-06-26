@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeToggle()
+                $("#div2").fadeToggle(2000)
+                $("#div3").fadeToggle(4000)
+            })
+        })
+    </script>
+</head>
+<body>
+<p>可以点击来切换淡入和淡出</p>
+<button type="button">切换</button>
+<div id="div1" style="width:80px;height:80px;background-color:#f00000"></div>
+<div id="div2" style="width:80px;height:80px;background-color:#fff000"></div>
+<div id="div3" style="width:80px;height:80px;background-color:#000000"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join用法:数组的所有元素组成一个字符串</title>
+</head>
+<body>
+<script>
+    var arr = new Array(4)
+    arr[0] = "peal";
+    arr[1] = "watermelon";
+    arr[2] = "durian";
+    arr[3] = "strawberry";
+    //数组的所有元素组成一个字符串
+    document.write(arr.join()+"<br/>");
+    document.write(arr.join("@")+"<br/>");
+
+    //从字面上对数组进行排序
+    document.write(arr.sort()+"<br/>");
+
+    //从数值上对数组进行排序
+    //如果a-b>0,则将a与b进行调换
+    function sortUp(a,b){
+        return a-b;
+    }
+    function sortDown(a,b){
+        return b-a;
+    }
+    var num = new Array(4);
+    num[0] = "23";
+    num[1] = "233";
+    num[2] = "1234";
+    num[3] = "123";
+    document.write(num+"<br/>");
+    document.write(num.sort(sortUp)+"<br/>");
+    document.write(num.sort(sortDown)+"<br/>");
+
+</script>
+</body>
+</html>

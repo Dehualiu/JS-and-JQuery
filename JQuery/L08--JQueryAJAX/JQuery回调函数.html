@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery回调函数</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                /*可选的 callback 参数规定当 load() 方法完成后所要允许的回调函数。回调函数可以设置不同的参数：
+                 responseTxt - 包含调用成功时的结果内容
+                 statusTXT - 包含调用的状态
+                 xhr - 包含 XMLHttpRequest 对象*/
+                $("div").load("01.txt",function(responseTxt,statusTxt,xhr){
+                    if(statusTxt=="success")
+                        alert("外部内容加载成功!")
+                    if(statusTxt=="error")
+                        alert("Error:"+xhr.status+":"+xhr.statusTxt)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <p>点击加载外部内容，并且提供反馈</p>
+</div>
+<button>加载外部内容</button>
+</body>
+</html>

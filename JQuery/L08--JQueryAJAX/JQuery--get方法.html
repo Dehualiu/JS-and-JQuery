@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get()方法</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("01.txt",function(data,status){
+                    alert("数据："+data+"\n"+"状态："+status)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <p>Return the result</p>
+</div>
+<button type="button">向页面发送HTTP GET请求，然后获得返回的结果</button>
+</body>
+</html>

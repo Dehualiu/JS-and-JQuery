@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>noConflict避免冲突</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        var liu = $.noConflict();
+        liu(document).ready(function(){
+            liu("button").click(function(){
+                liu("div").text("还是这个味道！");
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <p>还是老配方！</p>
+</div>
+<button type="button">Click On</button>
+</body>
+</html>

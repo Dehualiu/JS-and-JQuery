@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function parent(name,sex,age,text){
+        this.name=name;
+        this.sex=sex;
+        this.age=age;
+        this.text=text;
+    }
+    mySelf = new parent("Robot","男",21,"我最棒");
+    document.write("mySelf's name is"+mySelf.name+"<br>");
+    document.write("mySelf's sex is"+mySelf.sex+"<br>");
+    document.write("mySelf's age is"+mySelf.age+"<br>");
+    document.write("mySelf's text is"+mySelf.text+"<br>");
+</script>
+</body>
+</html>

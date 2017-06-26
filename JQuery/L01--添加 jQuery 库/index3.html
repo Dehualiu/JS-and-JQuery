@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        //$(selector).hide(speed,callback);
+        //可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+        //可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide()
+            })
+            $("#show").click(function(){
+                $("p").show(1000)
+            })
+        })
+    </script>
+</head>
+<body>
+<p>这里可以显示和隐藏</p>
+<button id="hide">隐藏</button>
+<button id="show">显现</button>
+</body>
+</html>

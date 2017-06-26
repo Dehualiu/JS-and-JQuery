@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新元素和内容</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#text1").append("<b style='color:blue;'>结尾添加</b>");
+            })
+
+            $("#button2").click(function(){
+                $("ul").append("<li style='color:red;'>结尾继续</li>");
+            })
+
+            $("#button3").click(function(){
+                $("#text1").prepend("<b style='color:lightgray;'>开头添加</b>");
+            })
+
+            $("#button4").click(function(){
+                $("ul").prepend("<li style='color:lightpink;'>开头继续</li>");
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="button1">结尾添加</button>
+<button id="button2">结尾继续</button>
+<button id="button3">开头添加</button>
+<button id="button4">开头继续</button>
+<p id="text1">端午节快乐!</p>
+<ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>菠萝</li>
+    <li>哈密瓜</li>
+    <li>草莓</li>
+</ul>
+</body>
+</html>

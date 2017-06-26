@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post()方法</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.post("02.asp",
+                    {
+                        name:"Dehua Liu",
+                        city:"jiangxi"
+                    },
+                    function(data,status){
+                        alert("数据："+data+"\n"+"状态："+status)
+                    }
+                )
+            })
+        })
+    </script>
+</head>
+<body>
+<form method="post" action="02.asp">
+    <input type="text" name="name" size="20"><br/>
+</form>
+<button type="button">向页面发送post请求，并且返回结果</button>
+</body>
+</html>

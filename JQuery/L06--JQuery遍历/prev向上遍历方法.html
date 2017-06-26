@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prev方法</title>
+    <style>
+        .siblings *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js">
+    </script>
+    <script>
+        //向前遍历，从h5向上遍历到h2，与parent有区别，prev是前面的同胞元素
+        $(document).ready(function(){
+            $("h5").prevUntil("span").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+<body class="siblings">
+
+<div style="width:500px;">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <span>span</span>
+    <h6>h6</h6>
+    <p>p</p>
+    <span>span</span>
+</div>
+
+</body>
+</html>

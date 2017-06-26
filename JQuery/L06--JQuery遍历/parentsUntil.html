@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>parentsUntil遍历</title>
+    <style>
+        .ancestors *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js">
+    </script>
+    <script>
+        //返回介于 <span> 与 <div> 元素之间的所有祖先元素
+        $(document).ready(function(){
+            $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</head>
+
+<body class="ancestors"> body (曾曾祖父)
+<div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+        <li>li (直接父)
+            <span>span</span>
+        </li>
+    </ul>
+</div>
+</body>
+
+</html>

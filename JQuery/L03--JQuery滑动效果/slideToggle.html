@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        //相关方法还有：slideUp()\slideDown()
+        $(document).ready(function(){
+            $(".head").click(function(){
+                $(".content").slideToggle(1000)
+            })
+        })
+    </script>
+    <style type="text/css">
+        .head,.content{
+            border:1px solid #c3c3c3;
+            background: #e5eecc;
+            width:300px;
+            text-align:center;
+            padding:5px;
+        }
+        .content{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="head">请点击这里</div>
+<div class="content">
+    <p>W3School - 领先的 Web 技术教程站点</p>
+    <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+</div>
+</body>
+</html>
